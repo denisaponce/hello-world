@@ -1,9 +1,18 @@
-import React from React;
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
+  const [hello, setHello] = useState("");
+  
+  useEffect(() => {
+    setHello("¡Hello World! 😉");
+  }, []);
   return (
-    git remote add origin https://github.com/denisaponce/hello-world.git
+    <div className="container">
+      <h1 className="saludo"> Hello World App</h1>
+      
+      <p className="saludo-2"> {hello} </p>
+    </div>
   );
 }
 
